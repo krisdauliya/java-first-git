@@ -12,11 +12,12 @@ public class bankActivity {
         Scanner input = new Scanner(System.in);
         System.out.println("How much you what to deposit? ");
         double deposit = input.nextDouble();
-       //dDeposit(50.00);
-        System.out.println(Deposit(deposit));
+        Deposit(deposit);
+        System.out.println(balance);
 
     }
-    static double  Deposit(double amount){
-        return(balance = balance+amount);
+    static void  Deposit(double amount){
+        balance = balance+amount;
+        //return(balance);
     }
 }
