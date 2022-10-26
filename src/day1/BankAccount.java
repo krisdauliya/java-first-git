@@ -6,8 +6,8 @@ public class BankAccount {
         //Account Number
         //Account Name
         //Branch
-
-
-
     //Behaviour
+        //Deposit
+        //Withdraw
+        //Interest
 }
