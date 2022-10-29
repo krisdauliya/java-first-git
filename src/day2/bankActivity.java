@@ -36,7 +36,6 @@ public class bankActivity {
         }else {
             Withdraw(amount);
         }
-        balance = balance+amount;
         //return(balance);
     }
 }
