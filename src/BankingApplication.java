@@ -29,12 +29,17 @@ public class BankingApplication {
         System.out.println("Customer is");
         System.out.println(CustomerKris.getFirstName() +" "+ CustomerKris.getMiddleName()+" "+ CustomerKris.getLastName());
         System.out.println("Account_number is: " +krisAccount.getAccountNumber());
+        System.out.println("Available Balance: " + krisAccount.getAccountBalance());
+       // Transaction Activity
+        BankActivity krisActivity = new BankActivity();
+        //krisActivity.setFlag(2);
+        //int krisFlag = krisActivity.getFlag();
+        double amount = 1250.00;
+        double balance = krisActivity.Transaction(amount, 2);
+        //double balance = krisActivity.getBalance();
+        System.out.println("Withdraw Amount: " + amount);
+        System.out.println("Remaining Balance: " + balance);
 
-
-
-        //bankActivity krisbankActivity = new bankActivity();
-        BankActivity.setBalance(2456.00);
-        BankActivity.setFlag(1);
 
 
 

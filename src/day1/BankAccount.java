@@ -45,5 +45,9 @@ public class BankAccount {
         this.interestRate = interestRate;
     }
 
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
 
 }
