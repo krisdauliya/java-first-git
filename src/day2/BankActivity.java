@@ -1,7 +1,8 @@
 package day2;
 import day1.BankAccount;
 public class BankActivity {
-    BankAccount activityAmount = new BankAccount();
+   // BankAccount activityAmount = new BankAccount();
+    private double accountBalance = 0.00;
     private static int flag;                       // flag == 1 for deposit, flag == 0 for withdraw
 
 
@@ -11,12 +12,12 @@ public class BankActivity {
         //Interest
         //Transaction
     public double  Withdraw(double amount){
-        double balance = activityAmount.getAccountBalance() - amount;
-        return(balance);
+        double accountBalance = this.accountBalance - amount;
+        return(accountBalance);
     }
     public double  Deposit(double amount){
-        double balance = activityAmount.getAccountBalance() + amount;
-        return(balance);
+        double accountBalance = this.accountBalance + amount;
+        return(accountBalance);
     }
     public double  Transaction(double amount, int flag){
         if ( flag == 1){
@@ -26,5 +27,7 @@ public class BankActivity {
         }
     }
 
-
+    public void setAccountBalance(double accountBalance) {
+        this.accountBalance = accountBalance;
+    }
 }

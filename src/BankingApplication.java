@@ -12,6 +12,7 @@ public class BankingApplication {
         String account_number = krisAccount.getAccountNumber();
         krisAccount.setAccountType("SAVING");
         krisAccount.setAccountBalance(45000.00);
+        double newBalance = krisAccount.getAccountBalance();
         krisAccount.setAccountHolderName("Krishna Dauliya");
 
         //Updating Customer information
@@ -29,11 +30,11 @@ public class BankingApplication {
         System.out.println("Customer is");
         System.out.println(CustomerKris.getFirstName() +" "+ CustomerKris.getMiddleName()+" "+ CustomerKris.getLastName());
         System.out.println("Account_number is: " +krisAccount.getAccountNumber());
-        System.out.println("Available Balance: " + krisAccount.getAccountBalance());
-       // Transaction Activity
+        System.out.println("Available Balance: " + newBalance);
+
+        // Transaction Activity
         BankActivity krisActivity = new BankActivity();
-        //krisActivity.setFlag(2);
-        //int krisFlag = krisActivity.getFlag();
+        krisActivity.setAccountBalance(newBalance);
         double amount = 1250.00;
         double balance = krisActivity.Transaction(amount, 2);
         //double balance = krisActivity.getBalance();
